@@ -1,32 +1,40 @@
 MOUNT="/Volumes/Paxilon"
+
+ESC="\033"
+RED="$ESC[1;31m"
+CYAN="$ESC[1;36m"
+CLEAR="$ESC[0m"
+
+CMD="rsync -ahP"
+
 if ! mount | grep "on $MOUNT" > /dev/null; then
-    echo "\033[0;31m\033[1mWaiting for mount...\033[0m"
+    echo $RED"Waiting for mount..."$CLEAR
 
     while ! mount | grep "on $MOUNT" > /dev/null; do
         sleep 1
     done
 
-    echo "\033[0;31m\033[1mDone\033[0m"
+    echo $RED"Done"$CLEAR
 fi
 
-echo "\033[0;36m\033[1mCopying Screenshots\033[0m"
-rsync -avz ~/Documents/Screenshots/ $MOUNT/Backups/Screenshots/
+echo $CYAN"Copying Screenshots"$CLEAR
+$CMD ~/Documents/Screenshots/ $MOUNT/Backups/Screenshots/
 
-echo "\033[0;36m\033[1mCopying Projects\033[0m"
-rsync -avz ~/Projects/              $MOUNT/Backups/Projects/
+echo $CYAN"Copying Projects"$CLEAR
+$CMD ~/Projects/              $MOUNT/Backups/Projects/
 
-echo "\033[0;36m\033[1mCopying Images\033[0m"
-rsync -avz ~/Documents/Images/      $MOUNT/Media/Images/
+echo $CYAN"Copying Images"$CLEAR
+$CMD ~/Documents/Images/      $MOUNT/Media/Images/
 
-echo "\033[0;36m\033[1mCopying School\033[0m"
-rsync -avz ~/Documents/School/      $MOUNT/Backups/School/
+echo $CYAN"Copying School"$CLEAR
+$CMD ~/Documents/School/      $MOUNT/Backups/School/
 
-echo "\033[0;36m\033[1mCopying Misc\033[0m"
-rsync -avz ~/Documents/Misc/        $MOUNT/Backups/Misc/
+echo $CYAN"Copying Misc"$CLEAR
+$CMD ~/Documents/Misc/        $MOUNT/Backups/Misc/
 
-echo "\033[0;36m\033[1mCopying Curse\033[0m"
-rsync -avz ~/Curse/Instances   $MOUNT/Backups/Minecraft
+echo $CYAN"Copying Curse"$CLEAR
+$CMD ~/Curse/Instances        $MOUNT/Backups/Minecraft
 
-echo "\033[0;36m\033[1mCopying KSP Downloads\033[0m"
-rsync -avz ~/Library/Application\ Support/Steam/steamapps/common/Kerbal\ Space\ Program/CKAN/downloads/ $MOUNT/Backups/KSP/Mods/CKAN\ Downloads
-rsync -avz ~/Library/Application\ Support/Steam/steamapps/common/Kerbal\ Space\ Program/GameData/ $MOUNT/Backups/KSP/GameData
+echo $CYAN"Copying KSP Downloads"$CLEAR
+$CMD ~/Library/Application\ Support/Steam/steamapps/common/Kerbal\ Space\ Program/CKAN/downloads/ $MOUNT/Backups/KSP/Mods/CKAN\ Downloads
+$CMD ~/Library/Application\ Support/Steam/steamapps/common/Kerbal\ Space\ Program/GameData/ $MOUNT/Backups/KSP/GameData
