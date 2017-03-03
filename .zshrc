@@ -1,5 +1,8 @@
 export PATH="$PATH:$HOME/Library/Python/2.7/bin" # pip installation location
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/Scripts"
+export PKG_CONFIG_PATH="/Library/Frameworks/Mono.framework/Versions/4.6.2/lib/pkgconfig":$PKG_CONFIG_PATH
 
 export POWERLINEHOME="/Users/drewcassidy/Library/Python/2.7/lib/python/site-packages/powerline"
 
@@ -26,3 +29,4 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export CLICOLOR=1
 export LSCOLORS='ExcxdxfxgxxexcxdxfBxBx'
 
+eval $(/usr/libexec/path_helper -s)
