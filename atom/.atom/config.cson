@@ -5,7 +5,6 @@
       "language-go"
       "language-mustache"
       "ide-csharp"
-      "metrics"
     ]
     ignoredNames: [
       ".git"
