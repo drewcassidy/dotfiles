@@ -1,0 +1,6 @@
+[submodule "fish/.config/fish/--force"]
+	path = fish/.config/fish/--force
+	url = https://github.com/0rax/fishline.git/
+[submodule "fish/.config/fish/fishline"]
+	path = fish/.config/fish/fishline
+	url = https://github.com/0rax/fishline.git/
