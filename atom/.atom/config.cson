@@ -1,0 +1,50 @@
+"*":
+  core:
+    disabledPackages: [
+      "language-clojure"
+      "language-go"
+      "language-mustache"
+      "ide-csharp"
+      "metrics"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".sass-cache"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "peacock-syntax"
+    ]
+    titleBar: "custom"
+  editor:
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showIndentGuide: true
+    tabLength: 4
+  "tree-view":
+    hideIgnoredNames: true
+    squashDirectoryNames: true
+  "vim-mode-plus":
+    keymapYToYankToLastCharacterOfLine: true
+".css.scss.source":
+  editor:
+    softWrapHangingIndent: 2
+".css.source":
+  editor:
+    softWrapHangingIndent: 2
+    tabType: "soft"
+".sass.source":
+  editor:
+    softWrapHangingIndent: 2
+    tabType: "soft"
+".source.yaml":
+  editor:
+    autoIndentOnPaste: false
+    tabLength: 2
