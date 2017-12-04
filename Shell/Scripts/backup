@@ -1,0 +1,55 @@
+MOUNT="/Volumes/Paxilon"
+
+ESC="\033"
+RED=$ESC"[1;31m"
+CYAN=$ESC"[1;36m"
+CLEAR=$ESC"[0m"
+
+CMD="rsync -ahPX"
+
+if ! mount | grep "on $MOUNT" > /dev/null; then
+    echo $RED"Waiting for mount..."$CLEAR
+
+    while ! mount | grep "on $MOUNT" > /dev/null; do
+        sleep 1
+    done
+
+    echo $RED"Done"$CLEAR
+fi
+
+echo $CYAN"Copying Screenshots"$CLEAR
+$CMD ~/Documents/Screenshots/ $MOUNT/Backups/Screenshots/
+
+echo $CYAN"Copying Projects"$CLEAR
+$CMD --delete ~/Projects/              $MOUNT/Backups/Projects/
+
+echo $CYAN"Copying Source Code"$CLEAR
+$CMD ~/Documents/Source\ Code/                   $MOUNT/Source\ Code/
+
+echo $CYAN"Copying Images"$CLEAR
+$CMD --delete ~/Documents/Images/      $MOUNT/Backups/Images/
+
+echo $CYAN"Copying School"$CLEAR
+$CMD --delete ~/Documents/School/      $MOUNT/Backups/School/
+
+echo $CYAN"Copying Papers"$CLEAR
+$CMD --delete ~/Documents/Papers/      $MOUNT/Backups/Papers/
+
+echo $CYAN"Copying Space Things"$CLEAR
+$CMD --delete ~/Documents/Space/      $MOUNT/Backups/Space/
+
+echo $CYAN"Copying Misc"$CLEAR
+$CMD ~/Documents/Misc/        $MOUNT/Backups/Misc/
+
+echo $CYAN"Copying Curse/Twitch"$CLEAR
+$CMD ~/Curse/Instances        $MOUNT/Backups/Minecraft/Curse
+
+echo $CYAN"Copying FTB"$CLEAR
+$CMD ~/ftb                    $MOUNT/Backups/Minecraft/ftb
+
+echo $CYAN"Copying Minecraft"$CLEAR
+$CMD ~/Library/Application\ Support/minecraft  $MOUNT/Backups/Minecraft
+
+echo $CYAN"Copying KSP Downloads"$CLEAR
+$CMD ~/Library/Application\ Support/Steam/steamapps/common/Kerbal\ Space\ Program/CKAN/downloads/ $MOUNT/Backups/KSP/Mods/CKAN\ Downloads
+$CMD ~/Library/Application\ Support/Steam/steamapps/common/Kerbal\ Space\ Program/GameData/ $MOUNT/Backups/KSP/GameData

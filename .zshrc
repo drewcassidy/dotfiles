@@ -19,7 +19,7 @@ unsetopt nomatch
 bindkey -e
 
 # colorize commands
-alias ls='ls -G'
+# alias ls='ls -G'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

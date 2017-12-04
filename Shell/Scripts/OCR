@@ -1,0 +1,18 @@
+#! /bin/zsh
+
+BASE=/tmp/tesseracttemp_$$
+TMP=$BASE.txt
+LOG=$HOME/Library/Logs/tesseract-ocr.log
+DATE=$(date "+%b %d %H:%M:%S")
+LOGHEADER="$DATE OCR[$$]:"
+FILENAME=$(basename "$1")
+
+cd /tmp/
+
+rm -f $TMP
+mkfifo $TMP
+
+echo "$LOGHEADER Analyzing file \"$FILENAME\"" >> $LOG
+/usr/local/bin/tesseract "$1" "$BASE" --psm 12 |& sed "s/^/$LOGHEADER    /" >>$LOG &
+cat $TMP
+rm -f $TMP
