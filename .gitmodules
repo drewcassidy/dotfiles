@@ -1,0 +1,3 @@
+[submodule "fishline-fork"]
+	path = fish/.config/fish/fishline
+	url = https://github.com/drewcassidy/fishline

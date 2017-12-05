@@ -48,7 +48,7 @@ set FLCLR_CONDA_BG          $FLCLR_VFISH_BG
 set FLCLR_CONDA_FG          $FLCLR_VFISH_FG
 
 # Color for GIT segment
-set FLCLR_GIT_BG_CLEAN      green 
+set FLCLR_GIT_BG_CLEAN      green
 set FLCLR_GIT_FG_CLEAN      black
 set FLCLR_GIT_BG_DIRTY      yellow
 set FLCLR_GIT_FG_DIRTY      black
