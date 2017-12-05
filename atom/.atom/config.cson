@@ -27,10 +27,17 @@
     scrollPastEnd: true
     showIndentGuide: true
     tabLength: 4
+  "exception-reporting":
+    userId: "c6ecdfe6-c496-4331-937d-5bb16acf637e"
+  "markdown-preview": {}
   "tree-view":
     hideIgnoredNames: true
     squashDirectoryNames: true
   "vim-mode-plus":
+    blackholeRegisteredOperators: [
+      "delete*"
+      "substitute*"
+    ]
     keymapYToYankToLastCharacterOfLine: true
 ".css.scss.source":
   editor:

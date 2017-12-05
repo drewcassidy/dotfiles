@@ -4,12 +4,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/Scripts"
 export PKG_CONFIG_PATH="/Library/Frameworks/Mono.framework/Versions/4.6.2/lib/pkgconfig":$PKG_CONFIG_PATH
 
-export POWERLINEHOME="/Users/drewcassidy/Library/Python/2.7/lib/python/site-packages/powerline"
-
 # added by travis gem
 [ -f /Users/drewcassidy/.travis/travis.sh ] && source /Users/drewcassidy/.travis/travis.sh
-
-. $POWERLINEHOME/bindings/zsh/powerline.zsh
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
