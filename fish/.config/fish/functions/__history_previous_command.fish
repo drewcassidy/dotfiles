@@ -1,3 +1,4 @@
+# Source: https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command
   switch (commandline -t)
   case "!"
