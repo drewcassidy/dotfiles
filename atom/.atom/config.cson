@@ -1,4 +1,6 @@
 "*":
+  "autoclose-html":
+    makeNeverCloseSelfClosing: false
   core:
     disabledPackages: [
       "language-clojure"
@@ -19,7 +21,7 @@
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "peacock-syntax"
+      "base16-syntax"
     ]
     titleBar: "custom"
   editor:
@@ -30,6 +32,8 @@
   "exception-reporting":
     userId: "c6ecdfe6-c496-4331-937d-5bb16acf637e"
   "markdown-preview": {}
+  minimap:
+    displayCodeHighlights: false
   "tree-view":
     hideIgnoredNames: true
     squashDirectoryNames: true
@@ -39,6 +43,11 @@
       "substitute*"
     ]
     keymapYToYankToLastCharacterOfLine: true
+  welcome:
+    showOnStartup: false
+".basic.html.text":
+  editor:
+    softWrap: true
 ".css.scss.source":
   editor:
     softWrapHangingIndent: 2

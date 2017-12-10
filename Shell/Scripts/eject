@@ -1,1 +1,2 @@
+#!/bin/bash
 diskutil eject "/Volumes/$1"

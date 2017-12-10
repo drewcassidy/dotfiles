@@ -1,4 +1,4 @@
-#! /bin/zsh
+#!/bin/zsh
 
 BASE=/tmp/tesseracttemp_$$
 TMP=$BASE.txt

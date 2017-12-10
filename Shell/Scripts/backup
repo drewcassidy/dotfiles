@@ -1,3 +1,5 @@
+#!/bin/bash
+
 MOUNT="/Volumes/Paxilon"
 
 ESC="\033"
