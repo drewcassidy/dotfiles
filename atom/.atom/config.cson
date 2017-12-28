@@ -18,6 +18,9 @@
       "desktop.ini"
       ".sass-cache"
     ]
+    packagesWithKeymapsDisabled: [
+      "jekyll"
+    ]
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
@@ -31,9 +34,10 @@
     tabLength: 4
   "exception-reporting":
     userId: "c6ecdfe6-c496-4331-937d-5bb16acf637e"
-  "markdown-preview": {}
-  minimap:
-    displayCodeHighlights: false
+  jekyll: {}
+  "markdown-preview":
+    useGitHubStyle: true
+  minimap: {}
   "tree-view":
     hideIgnoredNames: true
     squashDirectoryNames: true
@@ -48,6 +52,9 @@
 ".basic.html.text":
   editor:
     softWrap: true
+".css.liquid.scss.source":
+  editor:
+    softWrapHangingIndent: 2
 ".css.scss.source":
   editor:
     softWrapHangingIndent: 2

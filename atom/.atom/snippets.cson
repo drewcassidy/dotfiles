@@ -19,3 +19,20 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.gfm':
+  'Image':
+    'prefix': 'image'
+    'body': """
+	{% include figure-image.html
+  src="$1"
+  alt="$2" %}
+    """
+'.source.gfm':
+  'Image Gallery':
+    'prefix': 'gallery'
+    'body': """
+	{% include figure-gallery.html
+  src="$1"
+  alt="$2" %}
+    """
