@@ -34,6 +34,7 @@
     tabLength: 4
   "exception-reporting":
     userId: "c6ecdfe6-c496-4331-937d-5bb16acf637e"
+  "highlight-selected": {}
   jekyll: {}
   "markdown-preview":
     useGitHubStyle: true
@@ -62,6 +63,9 @@
   editor:
     softWrapHangingIndent: 2
     tabType: "soft"
+".python.source":
+  editor:
+    autoIndentOnPaste: true
 ".sass.source":
   editor:
     softWrapHangingIndent: 2

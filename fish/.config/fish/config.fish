@@ -18,3 +18,4 @@ set FLCLR_USER_FG           white
 set -gx GCC_COLORS 'error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 set -gx CLICOLOR 1
 set -gx LSCOLORS 'ExcxdxfxgxxexcxdxfBxBx'
+

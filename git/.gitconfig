@@ -1,0 +1,17 @@
+[user]
+	name = drewcassidy
+	email = drewcassidy@me.com
+	signingkey = 8FD477A1
+[core]
+	autocrlf = input
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	tree = log --all --decorate --oneline --graph
