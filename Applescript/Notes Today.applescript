@@ -1,22 +1,13 @@
 
-set now to current date
-set soon to now + 60 * 10
+set thecommandstring to "/usr/local/bin/icalbuddy -nc -ea -li 1 -b \"\" -ic \"UCI Classes\" eventsNow | sed -n \"1p\"" as string
+set currname to do shell script thecommandstring
 
-tell application "Calendar"
-	tell calendar "UCI Classes"
-		set curr to first event whose start date is less than or equal to soon and end date is greater than or equal to now
-		set currname to summary of curr
-		
-	end tell
-end tell
-currname as text
+set thecommandstring to "echo \"" & currname & "\" | sed  -E \"s/([Ll]ecture|[Dd]iscussion|[Ss]eminar|[Ll]ab)//g\"" as string
+set notename to do shell script thecommandstring
 
-set thecommandstring to "echo \"" & currname & "\" | sed  -E \"s/([Ll]ecture|[Dd]iscussion|[Ss]eminar)//g\"" as string
-set sedResult to do shell script thecommandstring
-set notename to sedResult
 set thecommandstring to "echo \"" & notename & "\" | sed  -E \"s/ $//g\"" as string
-set sedResult to do shell script thecommandstring
-set notename to sedResult
+set notename to do shell script thecommandstring
+
 
 set thecommandstring to "echo \"" & notename & "\" | sed  -E \"s/ //g\"" as string
 set sedResult to do shell script thecommandstring
@@ -25,10 +16,9 @@ set notebody to "#school/" & notetag & "
 ---
 "
 
--- set notename to do shell script "/usr/bin/python -c 'import sys, urllib; print urllib.quote(sys.argv[1])' " & quoted form of notename
--- set notebody to do shell script "/usr/bin/python -c 'import sys, urllib; print urllib.quote(sys.argv[1])' " & quoted form of notebody
-
-
+set today to short date string of (current date)
+today as string
+set notename to notename & " notes " & today
 
 set xurl to "bear://x-callback-url/create?title=" & encode_text(notename, true, true) & "&text=" & encode_text(notebody, true, true)
 
