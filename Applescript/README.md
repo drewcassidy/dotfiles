@@ -18,4 +18,4 @@ Copies the last screenshot (most recent in your screenshots folder) to the clipb
 These appear in the right click menu for files in finder or text selection, depending on what they support
 
 #### Put OCR text in comment
-OCRs an image file and places the output text into the macOS comment field (viewable with ⌘I) to make them searchable through Spotlight. Requires Tesseract to be installed, which can be done through Homebrew.
+OCRs an image file and places the output text into the macOS comment field (viewable with ⌘I) to make them searchable through Spotlight. Needs the accompanying [Bash script](https://github.com/drewcassidy/dotfiles/blob/master/Shell/Scripts/OCR). Requires Tesseract to be installed, which can be done through Homebrew.
