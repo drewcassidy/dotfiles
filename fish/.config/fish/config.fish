@@ -1,23 +1,21 @@
 # setup location variables
-set FISH_PATH  "$HOME/.config/fish"
-set FLINE_PATH "$FISH_PATH/fishline"
+set FISH_PATH  $HOME/.config/fish
+set FLINE_PATH $FISH_PATH/fishline
 
-set -gx PATH /usr/local/opt/curl/bin $PATH
-set -gx PATH /usr/local/opt/openssl/bin $PATH
-set -gx PATH ~/Library/Python/2.7/bin $PATH
+set -gx PATH ~/.rvm/bin $PATH
 
-set -gx PKG_CONFIG_PATH /usr/local/opt/openssl/lib/pkgconfig $PKG_CONFIG_PATH
+set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 # setup FishLine
 source $FLINE_PATH/init.fish
 source $FISH_PATH/fishline_colors.fish
-set FLCLR_USER_BG           blue
-set FLCLR_USER_FG           white
+set FLCLR_USER_BG           yellow
+set FLCLR_USER_FG           black
 
 # setup colors
 set -gx GCC_COLORS 'error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 set -gx CLICOLOR 1
-set -gx LSCOLORS 'ExcxdxfxgxxexcxdxfBxBx'
+set -gx LSCOLORS 'di=1;34:ln=32:so=33:pi=35:ex=36:bd=0;44:cd=0;42:su=0;43:sg=0;45:tw=1;31:ow=1;31'
 
 set fish_color_autosuggestion 'brblack'
 set fish_color_cancel -r
