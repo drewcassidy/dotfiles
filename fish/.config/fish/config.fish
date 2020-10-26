@@ -1,18 +1,22 @@
+set -gxa PATH /usr/local/opt/curl/bin
+set -gxa PATH /usr/local/opt/ruby/bin
+set -gxa PATH /usr/local/opt/openssl/bin
+set -gxa PATH /usr/local/opt/qt/bin
+set -gxa PATH /usr/local/opt/llvm/bin
+set -gxa PATH /opt/local/bin /opt/local/sbin
+set -gxa PATH /usr/local/bin /usr/local/sbin
+set -gxa PATH ~/.dotnet/tools
+set -gxa PATH ~/Library/Python/2.7/bin
+set -gxa PATH ~/Library/Python/3.8/bin
+set -gxa PATH ~/.gem/ruby/2.7.0/bin
+
 if status is-interactive
   # setup location variables
   set FISH_PATH  "$HOME/.config/fish"
   set FLINE_PATH "$FISH_PATH/fishline"
+
+  set -gx HOMEBREW_NO_AUTO_UPDATE 1
   
-  set -gx PATH /usr/local/opt/curl/bin $PATH
-  set -gx PATH /usr/local/opt/ruby/bin $PATH
-  set -gx PATH /usr/local/opt/openssl/bin $PATH
-  set -gx PATH /usr/local/opt/qt/bin $PATH
-  set -gx PATH /usr/local/opt/llvm/bin $PATH
-  set -gx PATH ~/.dotnet/tools $PATH
-  set -gx PATH ~/Library/Python/2.7/bin $PATH
-  set -gx PATH ~/Library/Python/3.8/bin $PATH
-  set -gx PATH ~/.gem/ruby/2.6.0/bin $PATH
-  set -gx PATH /opt/local/bin /opt/local/sbin $PATH
   
   set -gx PKG_CONFIG_PATH /usr/local/opt/openssl/lib/pkgconfig $PKG_CONFIG_PATH
   set -gx PKG_CONFIG_PATH /usr/local/opt/libffi/lib/pkgconfig  $PKG_CONFIG_PATH
